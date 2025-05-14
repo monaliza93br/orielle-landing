@@ -136,6 +136,13 @@
       }
     }
 
+    /* Netlify Honeypot field: should be hidden for users */
+    .hidden-honeypot {
+        position: absolute;
+        left: -5000px;
+        visibility: hidden;
+    }
+
   </style>
 </head>
 <body>
@@ -144,7 +151,14 @@
     <a href="/" class="text-logo">Orielle</a>
     <h1>Ask. Reflect. Remember.</h1>
     <p class="subheadline">Orielle. A quiet space to meet yourself. Here, your thoughts are reflected, and your own truths are illuminated.</p>
-    <form name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
+    
+    <form name="waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="waitlist" />
+      
+      <p class="hidden-honeypot">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      
       <input type="email" name="email" placeholder="Enter your email address" required>
       <button type="submit" class="cta-button">Join the Waitlist for Early Access</button>
     </form>
