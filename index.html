@@ -1,11 +1,142 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Orielle – Ask. Reflect. Remember.</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <style type="text/css">
+    /* Basic Reset & Body Styles */
+    body {
+      background-color: #17152e; /* Dark background from original theme */
+      color: #f6f6f6; /* Light text color */
+      font-family: Helvetica, Arial, sans-serif; /* Fallback fonts */
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Header Styles */
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 600px; /* Max width for content */
+    }
+
+    .text-logo {
+      font-size: 30px; /* Font size from original p.p1 */
+      color: #f6f6f6;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 28.8px; /* Font size from original h1 */
+      color: #f6f6f6;
+      -webkit-text-stroke: #f6f6f6 0.5px; /* Approximate original stroke */
+      margin-top: 0;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .subheadline {
+      font-size: 15px; /* Font size from original p.p3 */
+      color: #a9a9bc; /* Subdued color from original p.p3 */
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* Form Styles */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    input[type="email"] {
+      padding: 12px 15px; /* Adjusted padding */
+      border-radius: 25px; /* From new HTML inline style */
+      border: 1px solid #B8B8C8; /* From new HTML inline style */
+      font-size: 1rem; /* From new HTML inline style */
+      width: 100%;
+      max-width: 320px; /* Max width for email input */
+      margin-bottom: 1rem; /* From new HTML inline style */
+      box-sizing: border-box; /* Include padding and border in the element's total width and height */
+      text-align: center;
+    }
+    input[type="email"]::placeholder {
+        color: #888;
+    }
+
+
+    .cta-button {
+      background-color: #5b9dd2; /* Button color from original span.s3 */
+      color: #ffffff;
+      font-size: 1rem; /* Consistent font size */
+      padding: 12px 25px; /* Adjusted padding */
+      border: none;
+      border-radius: 25px; /* Rounded corners */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .cta-button:hover {
+      background-color: #4a8cc1; /* Darker shade on hover */
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      margin-top: auto; /* Pushes footer to the bottom if content is short */
+      padding-top: 20px;
+      width: 100%;
+      max-width: 600px; /* Max width for content */
+      font-size: 0.9rem;
+      color: #a9a9bc; /* Subdued color */
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: #7cbdec; /* Link color from original p.p6 links */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      body {
+        padding: 15px;
+      }
+      header h1 {
+        font-size: 24px;
+      }
+      .subheadline {
+        font-size: 14px;
+      }
+      input[type="email"] {
+        max-width: 100%; /* Full width on small screens */
+      }
+      .cta-button {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
@@ -14,7 +145,7 @@
     <h1>Ask. Reflect. Remember.</h1>
     <p class="subheadline">Orielle. A quiet space to meet yourself. Here, your thoughts are reflected, and your own truths are illuminated.</p>
     <form name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
-      <input type="email" name="email" placeholder="Enter your email address" required style="padding:0.75rem;border-radius:25px;border:1px solid #B8B8C8;font-size:1rem;width:100%;max-width:300px;margin-bottom:1rem;">
+      <input type="email" name="email" placeholder="Enter your email address" required>
       <button type="submit" class="cta-button">Join the Waitlist for Early Access</button>
     </form>
   </header>
@@ -31,6 +162,7 @@
   </footer>
 
   <script>
+    // Dynamically set the current year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
