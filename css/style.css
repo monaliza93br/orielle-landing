@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+    --indigo: #1E1D3C;
+    --porcelain: #F8F8F8;
+    --moonstone: #B8B8C8;
+    --lavender: #D8D3E5;
+    --ethereal: #6CAEDB;
+    --celestial: #8DC9F0;
+    --olive: #A8B5A2;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--indigo);
+    color: var(--porcelain);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--indigo);
+    padding: 2rem;
+}
+
+.text-logo {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--porcelain);
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.subheadline {
+    font-size: 1.25rem;
+    color: var(--moonstone);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--ethereal);
+    color: var(--porcelain);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--celestial);
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    background-color: var(--olive);
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: var(--porcelain);
+}
+
+footer a {
+    color: var(--celestial);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--porcelain);
+    text-decoration: underline;
+}

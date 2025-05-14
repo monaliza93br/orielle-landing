@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orielle – Ask. Reflect. Remember.</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <a href="/" class="text-logo">Orielle</a>
+    <h1>Ask. Reflect. Remember.</h1>
+    <p class="subheadline">Orielle. A quiet space to meet yourself. Here, your thoughts are reflected, and your own truths are illuminated.</p>
+    <form name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
+      <input type="email" name="email" placeholder="Enter your email address" required style="padding:0.75rem;border-radius:25px;border:1px solid #B8B8C8;font-size:1rem;width:100%;max-width:300px;margin-bottom:1rem;">
+      <button type="submit" class="cta-button">Join the Waitlist for Early Access</button>
+    </form>
+  </header>
+
+  <footer>
+    <p>© <span id="year"></span> Orielle. The journey inward begins.</p>
+    <p>
+      <a href="https://instagram.com/orielleai" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/orielleai" target="_blank">Facebook</a> |
+      <a href="https://x.com/orielleai" target="_blank">X</a> |
+      <a href="https://tiktok.com/@orielleai" target="_blank">TikTok</a> |
+      <a href="https://youtube.com/@orielleai" target="_blank">YouTube</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
